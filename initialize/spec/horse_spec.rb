@@ -4,13 +4,13 @@ require_relative '../lib/horse'
 RSpec.describe Horse do
   it 'exists' do
     harry = Horse.new("Harry")
-
     expect(harry).to be_an_instance_of(Horse)
   end
-
+  
   it 'has a name' do
     harry = Horse.new("Harry")
-
+    
+    # require "pry"; binding.pry
     expect(harry.name).to eq("Harry")
   end
 
@@ -25,7 +25,7 @@ RSpec.describe Horse do
 
     harry.add_to_diet("Hay")
     harry.add_to_diet("Sugar Cubes")
-
+    require "pry"; binding.pry
     expect(harry.diet).to eq(["Hay", "Sugar Cubes"])
   end
 end

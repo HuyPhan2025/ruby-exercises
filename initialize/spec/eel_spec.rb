@@ -4,7 +4,7 @@ require_relative '../lib/eel'
 RSpec.describe Eel do
   it 'exists' do
     eel = Eel.new("Earl")
-
+    # require "pry"; binding.pry
     expect(eel).to be_an_instance_of(Eel)
   end
 

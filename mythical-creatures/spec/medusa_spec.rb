@@ -1,5 +1,6 @@
 require 'rspec'
-require './lib/medusa'
+require '../lib/medusa'
+require '../lib/person'
 
 RSpec.describe Medusa do
   it 'has a name' do
@@ -31,11 +32,11 @@ RSpec.describe Medusa do
     expect(victim.stoned?).to be true
   end
 
-  it 'can only have three victims' do
+  xit 'can only have three victims' do
     # your code here
   end
 
-  it 'if a fourth victim is stoned the first is unstoned' do
+  xit 'if a fourth victim is stoned the first is unstoned' do
     # your code here
   end
 end

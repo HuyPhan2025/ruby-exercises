@@ -1,5 +1,5 @@
 require 'rspec'
-require './lib/pirate'
+require '../lib/pirate'
 
 RSpec.describe Pirate do
   it 'has a name' do
@@ -39,12 +39,19 @@ RSpec.describe Pirate do
 
   it 'has a booty' do
     # create a pirate
+    pirate = Pirate.new('Luffy')
     # check that the pirate starts with 0 booty
+    expect(pirate.booty?).to eq(0)
   end
 
   it 'gets 100 booty for robbing a ship' do
     # create a pirate
+    pirate = Pirate.new('Luffy')
     # rob some ships
+    1.times do
+      pirate.robbed_ship
+    end
+    expect(pirate.booty?).to eq(100)
     # check that the pirate got 100 booty for each ship it robbed
   end
 
